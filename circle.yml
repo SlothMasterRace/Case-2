@@ -4,9 +4,6 @@ checkout:
   post:
     - git submodule sync
     - git submodule update --init
-database:
-  override:
-    - mysql -u ubuntu circle_test < my-database-setup.sql
 test:
   override:
     - php ./app/run-server.php --daemon
